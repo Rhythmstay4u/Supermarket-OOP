@@ -84,7 +84,7 @@ int main() {
 
         int option;
         std::cin >> option;
-        std::cin.ignore(); // Consume the newline character
+        std::cin.ignore();
 
         switch (option) {
             case 1: {
@@ -123,7 +123,7 @@ int main() {
                 for (auto it = cart.items.begin(); it != cart.items.end(); ++it) {
                     if ((*it)->getName() == itemToRemove) {
                         cart.removeItem(*it);
-                        delete *it; // Free the memory allocated for the removed item
+                        delete *it;
                         std::cout << itemToRemove << " has been removed from the cart." << std::endl;
                         break;
                     }
